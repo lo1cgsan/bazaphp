@@ -6,6 +6,18 @@ ini_set('display_errors', 1);
 ini_set('log_errors', 1);
 ini_set('error_log', 'errorlog.txt');
 
-echo "Witaj!";
+$dbfile = 'baza/baza.db';
+$db = null;
+$kom = array();
+
+require_once('inc/db.php');
+require_once('inc/functions.php');
+
+init_baza();
+init_tables();
+
+echo "<h1>Witaj!</h1>";
+
+get_kom();
 
 ?>
