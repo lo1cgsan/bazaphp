@@ -6,18 +6,20 @@ ini_set('display_errors', 1);
 ini_set('log_errors', 1);
 ini_set('error_log', 'errorlog.txt');
 
-$dbfile = 'baza/baza.db';
-$db = null;
 $kom = array();
 
 require_once('inc/db.php');
 require_once('inc/functions.php');
 
-init_baza();
-init_tables();
+$db = new Baza('baza/baza.db');
 
-echo "<h1>Witaj!</h1>";
+if (isset($_GET['id']))
+	$id = $_GET['id'];
+else
+	$id = 1;
 
-get_kom();
+$strona = array();
+
+include_once('inc/template.php');
 
 ?>
