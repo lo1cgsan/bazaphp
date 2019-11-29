@@ -1,0 +1,13 @@
+[29-Nov-2019 07:42:18 Europe/Warsaw] PHP Parse error:  syntax error, unexpected '=' in /home/lo1sand/public_html/bazaphp/inc/db.php on line 13
+[29-Nov-2019 07:45:04 Europe/Warsaw] PHP Parse error:  syntax error, unexpected '->' (T_OBJECT_OPERATOR) in /home/lo1sand/public_html/bazaphp/inc/db.php on line 35
+[29-Nov-2019 07:46:14 Europe/Warsaw] PHP Fatal error:  Uncaught Error: Undefined class constant 'ret' in /home/lo1sand/public_html/bazaphp/inc/db.php:25
+Stack trace:
+#0 /home/lo1sand/public_html/bazaphp/inc/db.php(18): Baza->init_tables()
+#1 /home/lo1sand/public_html/bazaphp/index.php(14): Baza->__construct('baza/baza.db')
+#2 {main}
+  thrown in /home/lo1sand/public_html/bazaphp/inc/db.php on line 25
+[29-Nov-2019 07:46:24 Europe/Warsaw] PHP Fatal error:  Uncaught Error: Undefined class constant 'kom' in /home/lo1sand/public_html/bazaphp/inc/template.php:33
+Stack trace:
+#0 /home/lo1sand/public_html/bazaphp/index.php(23): include_once()
+#1 {main}
+  thrown in /home/lo1sand/public_html/bazaphp/inc/template.php on line 33
