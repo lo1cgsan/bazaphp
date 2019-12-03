@@ -11,3 +11,9 @@ Stack trace:
 #0 /home/lo1sand/public_html/bazaphp/index.php(23): include_once()
 #1 {main}
   thrown in /home/lo1sand/public_html/bazaphp/inc/template.php on line 33
+[03-Dec-2019 08:18:26 Europe/Warsaw] PHP Notice:  Undefined index: login in /home/lo1sand/public_html/bazaphp/userform.html on line 3
+[03-Dec-2019 08:19:50 Europe/Warsaw] PHP Notice:  Undefined index: login in /home/lo1sand/public_html/bazaphp/userform.html on line 3
+[03-Dec-2019 08:36:21 Europe/Warsaw] PHP Fatal error:  Uncaught Error: Class 'User' not found in /home/lo1sand/public_html/bazaphp/index.php:15
+Stack trace:
+#0 {main}
+  thrown in /home/lo1sand/public_html/bazaphp/index.php on line 15
