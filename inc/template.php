@@ -30,9 +30,9 @@
     	   <div class="col">
             <h1><?php get_page_title($strona); ?></h1>
 <?php
+    get_page_content($strona);
     get_kom(Baza::$kom);
     get_kom($kom);
-    get_page_content($strona);
 ?>
             </div>
     	</div>
