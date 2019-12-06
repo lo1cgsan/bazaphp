@@ -10,6 +10,7 @@ INSERT INTO menu VALUES(NULL, 'glowna', 'Aplikacja wiadomości', 1);
 INSERT INTO menu VALUES(NULL, 'wiadomosci', 'Lista wiadomości', 2);
 INSERT INTO menu VALUES(NULL, 'dodaj', 'Dodawanie / Edycja wiadomości', 3);
 INSERT INTO menu VALUES(NULL, 'userform', 'Użytkownicy', 4);
+INSERT INTO menu VALUES(NULL, 'userlogin', 'Zaloguj się', 5);
 
 DROP TABLE IF EXISTS users;
 CREATE TABLE users (
