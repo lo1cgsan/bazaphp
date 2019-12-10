@@ -5,14 +5,45 @@ ini_set('session.save_path', 'sesje');
 class User {
 	var $dane = array();
 	var $keys = array('id', 'login', 'haslo', 'email', 'data');
+	var $kom = array();
+	var $CookieName = 'bazaphp';
+	var $remTime = 7200; // 2 godz
+	var $CookieDomain = '';
 
 	function __construct() {
+		if ($this->CookieDomain == '') $this->CookieDomain = $_SERVER['HTTP_HOST'];
+
 		if (!isset($_SESSION)) session_start();
+
+		if (isset($_COOKIE[$this->CookieName]) && !$this->id) {
+			$u = unserialize(base64_decode($_COOKIE[$this->CookieName]));
+			$this->login($u['login'], $u['haslo'], false, true);
+		}
+
+		if (!$this->id && isset($_POST['login'])) {
+			//$login = clrtxt($_POST['login']);
+			foreach ($_POST as $k => $v) {
+    		${$k} = clrtxt($v);
+  		}
+  		$this->login($login, $haslo, true, true);
+		}
+
 	}
 
-	function login($login, $haslo) {
-		if ($this->is_user($login, $haslo)) {
-			$_SESSION['dane'] = $this->dane;
+	function login($login, $haslo, $remember=false, $loadUser=true) {
+		if ($loadUser && $this->is_user($login, $haslo)) {
+			if ($remember) { // zapisanie ciasteczka
+				$cookie = base64_encode(serialize(array('login'=>$login, 'haslo'=>$haslo, 'czas'=>time())));
+				$a = setcookie($this->CookieName, $cookie, time()+$this->remTime, '/', $this->CookieDomain, false, true);
+				if ($a) $this->kom[] = 'Zapisano ciasteczko.';
+			}
+		} else {
+			$this->kom[] = '<b>Błędny login lub hasło!</b>';
+			return false;
+		}
+		if ($remember) {
+			$this->kom[] = "Witaj $login! Zostałeś zalogowany.";
+			return true;
 		}
 	}
 

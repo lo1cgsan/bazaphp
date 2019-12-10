@@ -32,6 +32,7 @@
 <?php
     get_page_content($strona);
     get_kom(Baza::$kom);
+    get_kom($user->kom);
     get_kom($kom);
 ?>
             </div>
