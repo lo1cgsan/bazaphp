@@ -17,3 +17,16 @@ Stack trace:
 Stack trace:
 #0 {main}
   thrown in /home/lo1sand/public_html/bazaphp/index.php on line 15
+[10-Dec-2019 08:43:41 Europe/Warsaw] PHP Notice:  Undefined variable: user in /home/lo1sand/public_html/bazaphp3ag2/inc/functions.php on line 22
+[10-Dec-2019 08:43:41 Europe/Warsaw] PHP Notice:  Trying to get property 'id' of non-object in /home/lo1sand/public_html/bazaphp3ag2/inc/functions.php on line 22
+[10-Dec-2019 08:43:54 Europe/Warsaw] PHP Notice:  Undefined variable: user in /home/lo1sand/public_html/bazaphp3ag2/inc/functions.php on line 22
+[10-Dec-2019 08:43:54 Europe/Warsaw] PHP Notice:  Trying to get property 'id' of non-object in /home/lo1sand/public_html/bazaphp3ag2/inc/functions.php on line 22
+[10-Dec-2019 08:44:04 Europe/Warsaw] PHP Notice:  Undefined variable: user in /home/lo1sand/public_html/bazaphp3ag2/inc/functions.php on line 22
+[10-Dec-2019 08:44:04 Europe/Warsaw] PHP Notice:  Trying to get property 'id' of non-object in /home/lo1sand/public_html/bazaphp3ag2/inc/functions.php on line 22
+[10-Dec-2019 08:44:09 Europe/Warsaw] PHP Notice:  Undefined variable: user in /home/lo1sand/public_html/bazaphp3ag2/inc/functions.php on line 22
+[10-Dec-2019 08:44:09 Europe/Warsaw] PHP Notice:  Trying to get property 'id' of non-object in /home/lo1sand/public_html/bazaphp3ag2/inc/functions.php on line 22
+[10-Dec-2019 08:44:15 Europe/Warsaw] PHP Notice:  Undefined variable: user in /home/lo1sand/public_html/bazaphp3ag2/inc/functions.php on line 22
+[10-Dec-2019 08:44:15 Europe/Warsaw] PHP Notice:  Trying to get property 'id' of non-object in /home/lo1sand/public_html/bazaphp3ag2/inc/functions.php on line 22
+[10-Dec-2019 08:44:18 Europe/Warsaw] PHP Notice:  Undefined variable: user in /home/lo1sand/public_html/bazaphp3ag2/inc/functions.php on line 22
+[10-Dec-2019 08:44:18 Europe/Warsaw] PHP Notice:  Trying to get property 'id' of non-object in /home/lo1sand/public_html/bazaphp3ag2/inc/functions.php on line 22
+[10-Dec-2019 08:50:01 Europe/Warsaw] PHP Notice:  Undefined variable: redirectTo in /home/lo1sand/public_html/bazaphp3ag2/inc/users.php on line 56

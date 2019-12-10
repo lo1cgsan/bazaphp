@@ -11,14 +11,14 @@
 
 <body>
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-        <a class="navbar-brand" href="http://lo1.sandomierz.pl">I LO CG</a>
+        <a class="navbar-brand" href="?id=1">PHPapp</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="collapsibleNavbar">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="http://lo1.sandomierz.pl/plany/ostatni/index.html">Plan lekcji</a>
+                    <a class="nav-link" href="https://www.w3schools.com/php/php_ref_overview.asp">PHP Ref</a>
                 </li>
                 <?php get_menu($db, $id, $strona); ?>
             </ul>
@@ -34,6 +34,11 @@
     get_kom(Baza::$kom);
     get_kom($user->kom);
     get_kom($kom);
+    if (isset($_COOKIE[$user->CookieName])) {
+        echo '<p>Zapisane ciasteczko: '.$_COOKIE[$user->CookieName].'</p>';
+    } else {
+        echo '<p>Brak ciasteczka!</p>';
+    }
 ?>
             </div>
     	</div>

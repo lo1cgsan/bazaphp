@@ -20,12 +20,12 @@ class User {
 			$this->login($u['login'], $u['haslo'], false, true);
 		}
 
-		if (!$this->id && isset($_POST['login'])) {
+		if (!$this->id && isset($_POST['login2'])) {
 			//$login = clrtxt($_POST['login']);
 			foreach ($_POST as $k => $v) {
     		${$k} = clrtxt($v);
   		}
-  		$this->login($login, $haslo, true, true);
+  		$this->login($login2, $haslo2, true, true);
 		}
 
 	}
@@ -44,6 +44,18 @@ class User {
 		if ($remember) {
 			$this->kom[] = "Witaj $login! Zostałeś zalogowany.";
 			return true;
+		}
+	}
+
+	function logout($redirectTo = '') {
+		echo 'Wylogowanie';
+		setcookie($this->CookieName, '', time()-(3*$this->remTime), '/', $this->CookieDomain, false, true);
+		$this->dane = array();
+		$_SESSION = array();
+		if (session_destroy()) $this->kom[] = 'Zostałeś wylogowany!';
+		if ($redirectTo != '' && !headers_sent()) {
+			header('Location: '.$redirectTo);
+			exit;
 		}
 	}
 
