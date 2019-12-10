@@ -11,13 +11,14 @@ class User {
 	var $CookieDomain = '';
 
 	function __construct() {
-		if ($this->CookieDomain == '') $this->CookieDomain = $_SERVER['HTTP_HOST'];
+		if ($this->CookieDomain == '') $this->CookieDomain = 'localhost'; // $_SERVER['HTTP_HOST'];
 
 		if (!isset($_SESSION)) session_start();
 
 		if (isset($_COOKIE[$this->CookieName]) && !$this->id) {
 			$u = unserialize(base64_decode($_COOKIE[$this->CookieName]));
 			$this->login($u['login'], $u['haslo'], false, true);
+			$this->kom[] = "Witaj {$this->login}, zostałeś automatycznie zalogowany!";
 		}
 
 		if (!$this->id && isset($_POST['login2'])) {
