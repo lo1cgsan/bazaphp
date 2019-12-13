@@ -35,6 +35,7 @@
     get_kom(Baza::$kom);
     get_kom($user->kom);
     get_kom($kom);
+    print_r($user->dane);
     if (isset($_COOKIE[$user->CookieName])) {
         echo '<p>Zapisane ciasteczko: '.$_COOKIE[$user->CookieName].'</p>';
     } else {

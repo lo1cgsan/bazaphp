@@ -37,14 +37,12 @@ class User {
 				$cookie = base64_encode(serialize(array('login'=>$login, 'haslo'=>$haslo, 'czas'=>time())));
 				$a = setcookie($this->CookieName, $cookie, time()+$this->remTime, '/', $this->CookieDomain, false, true);
 				if ($a) $this->kom[] = 'Zapisano ciasteczko.';
+				$this->kom[] = "Witaj $login! Zostałeś zalogowany.";
+				return true;
 			}
 		} else {
 			$this->kom[] = '<b>Błędny login lub hasło!</b>';
 			return false;
-		}
-		if ($remember) {
-			$this->kom[] = "Witaj $login! Zostałeś zalogowany.";
-			return true;
 		}
 	}
 
