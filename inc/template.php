@@ -31,6 +31,7 @@
             <h1><?php get_page_title($strona); ?></h1>
 <?php
     get_page_content($strona);
+    if (isset($_GET['logout'])) $user->kom[] = 'Zostałeś wylogowany!';
     get_kom(Baza::$kom);
     get_kom($user->kom);
     get_kom($kom);
